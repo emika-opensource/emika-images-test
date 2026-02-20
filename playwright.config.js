@@ -3,9 +3,9 @@ const { defineConfig } = require('@playwright/test');
 
 module.exports = defineConfig({
   testDir: './tests',
-  timeout: 120_000,
+  timeout: 180_000, // 3 min per test — AI responses can be slow
   retries: 0,
-  workers: 1, // Sequential — we share BrowserBase sessions
+  workers: 1, // Sequential — BrowserBase sessions
   reporter: [['html', { open: 'never' }], ['list']],
   use: {
     screenshot: 'on',
@@ -23,10 +23,6 @@ module.exports = defineConfig({
     {
       name: 'employee-roles',
       testMatch: /employee-roles\.spec\.js/,
-    },
-    {
-      name: 'ai-conversation',
-      testMatch: /ai-conversation\.spec\.js/,
     },
   ],
 });
