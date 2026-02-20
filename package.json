@@ -1,0 +1,28 @@
+{
+  "name": "emika-images-test",
+  "version": "1.0.0",
+  "description": "Amica Image Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:avatars": "npx playwright test --project=avatar-images",
+    "test:signup": "npx playwright test --project=signup-flow",
+    "test:roles": "npx playwright test --project=employee-roles",
+    "test:chat": "npx playwright test --project=ai-conversation"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emika-opensource/emika-images-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emika-opensource/emika-images-test/issues"
+  },
+  "homepage": "https://github.com/emika-opensource/emika-images-test#readme",
+  "dependencies": {
+    "@playwright/test": "^1.58.2",
+    "playwright": "^1.58.2"
+  }
+}
